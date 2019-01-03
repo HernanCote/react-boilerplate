@@ -26,6 +26,14 @@ module.exports = {
         ]
       },
       {
+        test: /\.(eot|svg|ttf|woff|woff2)$/,
+        loader: 'file-loader?name=./fonts/[name].[ext]'
+      },
+      {
+        test: /\.(png|jpg)$/,
+        loader: 'url-loader?limit=20000'
+      },
+      {
         test: /\.s(a|c)ss$/,
         use: [
           {
